@@ -1,0 +1,2042 @@
+[
+    [
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "anger",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/milf_contempt_022.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_043.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "disgust",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disbelief_089.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_027.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "fear",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "anger",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/milf_agree_080.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "disgust",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_winning_023.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "disgust",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "disgust",
+                "happiness",
+                "fear"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_fear_terror_050.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "sadness",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disbelief_089.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "fear",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_103.png",
+            "answer": "happiness",
+            "options": [
+                "happiness",
+                "anger",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/milf_disagree_reluctant_009.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "disgust",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_imagine-positive_090.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "disgust",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_agree_010.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "anger",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/mamm_imagine-negative_077.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_disbelief_035.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "disgust",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_disbelief_035.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "happiness",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "disgust",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disbelief_089.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/mamm_sad_030.png",
+            "answer": "sadness",
+            "options": [
+                "disgust",
+                "sadness",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/milf_remember_negative_043.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "disgust",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "anger",
+                "sadness",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_contempt_053.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "happiness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "sadness/milf_imagine-negative_044.png",
+            "answer": "sadness",
+            "options": [
+                "sadness",
+                "fear",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "anger",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disagree_reluctant_009.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "happiness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "anger",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "happiness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_endearment_079.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_disbelief_026.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "disgust",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "happiness",
+                "fear",
+                "sadness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_winning_023.png",
+            "answer": "happiness",
+            "options": [
+                "happiness",
+                "sadness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_imagine-positive_090.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "happiness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_027.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "fear",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "fear",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_050.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "happiness",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "happiness",
+                "sadness",
+                "disgust"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "sadness/mamm_contempt_153.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "sadness",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/mamm_pain_felt_042.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "sadness",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "fear",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/milf_contempt_022.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "happiness",
+                "sadness",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "fear",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_054.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "happiness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "fear",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_069.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "disgust",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "anger",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_043.png",
+            "answer": "fear",
+            "options": [
+                "disgust",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/mamm_pain_felt_042.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "sadness",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/milf_happy_laughing_050.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_laughing_042.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "happiness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "happiness",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_054.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "anger",
+                "disgust",
+                "happiness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "anger",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_imagine-negative_077.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_disbelief_035.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_agree_010.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "fear",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_010.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "disgust",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "happiness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "sadness/mamm_pain_felt_042.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "fear",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "anger",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "anger",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "sadness/milf_dont_know_012.png",
+            "answer": "sadness",
+            "options": [
+                "sadness",
+                "disgust",
+                "anger",
+                "fear"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_agree_010.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "fear",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/mamm_pain_felt_042.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_dont_understand_047.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "disgust",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "sadness",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_disbelief_026.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_043.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "disgust",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "disgust",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "anger",
+                "happiness",
+                "fear"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "sadness/mamm_contempt_153.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "sadness",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_103.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_satiated_059.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "anger",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_050.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/mamm_dont_know_027.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "sadness",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_disbelief_026.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "sadness",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "disgust",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_071.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "happiness",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "happiness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/milf_dont_know_012.png",
+            "answer": "sadness",
+            "options": [
+                "sadness",
+                "fear",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disbelief_089.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "fear",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_imagine-negative_077.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "anger",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_103.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_disbelief_035.png",
+            "answer": "anger",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "sadness",
+                "disgust",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_winning_023.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_disbelief_026.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "happiness",
+                "disgust",
+                "sadness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "sadness/milf_imagine-negative_044.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_imagine-negative_077.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "disgust",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "anger",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_dont_understand_047.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "anger",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_treudoof_044.png",
+            "answer": "happiness",
+            "options": [
+                "happiness",
+                "anger",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_encouraging_032.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "fear",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "anger",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/milf_agree_080.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "happiness",
+                "fear",
+                "disgust"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_remember_negative_069.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_encouraging_071.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "sadness",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "sadness",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_agree_010.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "anger",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/milf_happy_laughing_068.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "anger",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "fear",
+                "happiness",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "sadness",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_encouraging_032.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "sadness",
+                "anger"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "happiness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_054.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "happiness",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "disgust",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_069.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "fear",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/mamm_sad_030.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "sadness",
+                "fear",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_071.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/milf_contempt_022.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "happiness",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_010.png",
+            "answer": "disgust",
+            "options": [
+                "fear",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/mamm_disagree_considered_027.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_remember_positive_050.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "fear",
+                "happiness",
+                "sadness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "disgust/mamm_dont_understand_047.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "disgust",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "disgust",
+                "sadness",
+                "happiness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_imagine-positive_090.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "fear",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_satiated_059.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "fear",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "anger",
+                "sadness",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_054.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "sadness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_smiling_uncertain_046.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_arrogant_056.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/mamm_pain_felt_042.png",
+            "answer": "sadness",
+            "options": [
+                "anger",
+                "fear",
+                "sadness",
+                "disgust"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "fear",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/mamm_contempt_153.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "sadness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_027.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disagree_reluctant_009.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_fear_terror_050.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_achievement_103.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "happiness",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "fear",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/milf_compassion_055.png",
+            "answer": "sadness",
+            "options": [
+                "disgust",
+                "anger",
+                "sadness",
+                "fear"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_endearment_079.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "anger",
+                "fear",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_disgust_071.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "fear",
+                "sadness",
+                "happiness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "disgust/milf_disgust_010.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "sadness",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_remember_positive_050.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "disgust",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_endearment_079.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_satiated_059.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "sadness",
+                "happiness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "happiness/mamm_happy_laughing_042.png",
+            "answer": "happiness",
+            "options": [
+                "happiness",
+                "disgust",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "happiness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_fear_terror_050.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "disgust",
+                "sadness",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_054.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "happiness",
+                "fear",
+                "sadness"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_remember_negative_043.png",
+            "answer": "fear",
+            "options": [
+                "sadness",
+                "happiness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "happiness",
+                "anger",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/milf_happy_laughing_050.png",
+            "answer": "happiness",
+            "options": [
+                "sadness",
+                "anger",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "anger/milf_bored_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/mamm_dont_understand_047.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "fear",
+                "anger",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "sadness",
+                "anger",
+                "fear"
+            ]
+        },
+        {
+            "image": "disgust/milf_disagree_reluctant_009.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "fear",
+                "anger",
+                "sadness"
+            ]
+        },
+        {
+            "image": "sadness/milf_remember_negative_043.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "disgust",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_endearment_079.png",
+            "answer": "happiness",
+            "options": [
+                "fear",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "sadness/milf_dont_know_012.png",
+            "answer": "sadness",
+            "options": [
+                "sadness",
+                "happiness",
+                "fear",
+                "anger"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "fear/mamm_remember_negative_069.png",
+            "answer": "fear",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_030.png",
+            "answer": "fear",
+            "options": [
+                "happiness",
+                "fear",
+                "anger",
+                "disgust"
+            ]
+        },
+        {
+            "image": "sadness/milf_dont_know_012.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_042.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "disgust",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_encouraging_071.png",
+            "answer": "happiness",
+            "options": [
+                "happiness",
+                "disgust",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "happiness/milf_agree_080.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "happiness",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/mamm_agree_reluctant_069.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "fear",
+                "sadness",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_smiling_endearment_079.png",
+            "answer": "happiness",
+            "options": [
+                "disgust",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_043.png",
+            "answer": "fear",
+            "options": [
+                "disgust",
+                "anger",
+                "fear",
+                "sadness"
+            ]
+        },
+        {
+            "image": "fear/mamm_insecurity_068.png",
+            "answer": "fear",
+            "options": [
+                "disgust",
+                "sadness",
+                "fear",
+                "anger"
+            ]
+        }
+    ],
+    [
+        {
+            "image": "sadness/mamm_sad_030.png",
+            "answer": "sadness",
+            "options": [
+                "happiness",
+                "anger",
+                "sadness",
+                "disgust"
+            ]
+        },
+        {
+            "image": "disgust/milf_disagree_reluctant_031.png",
+            "answer": "disgust",
+            "options": [
+                "anger",
+                "fear",
+                "disgust",
+                "sadness"
+            ]
+        },
+        {
+            "image": "disgust/milf_disgust_010.png",
+            "answer": "disgust",
+            "options": [
+                "happiness",
+                "sadness",
+                "disgust",
+                "anger"
+            ]
+        },
+        {
+            "image": "disgust/mamm_dont_understand_047.png",
+            "answer": "disgust",
+            "options": [
+                "sadness",
+                "fear",
+                "disgust",
+                "happiness"
+            ]
+        },
+        {
+            "image": "disgust/milf_contempt_022.png",
+            "answer": "disgust",
+            "options": [
+                "disgust",
+                "happiness",
+                "fear",
+                "anger"
+            ]
+        },
+        {
+            "image": "happiness/mamm_agree_010.png",
+            "answer": "happiness",
+            "options": [
+                "anger",
+                "sadness",
+                "happiness",
+                "fear"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_065.png",
+            "answer": "anger",
+            "options": [
+                "disgust",
+                "sadness",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/mamm_disbelief_035.png",
+            "answer": "anger",
+            "options": [
+                "sadness",
+                "fear",
+                "happiness",
+                "anger"
+            ]
+        },
+        {
+            "image": "anger/mamm_annoyed_bothered_030.png",
+            "answer": "anger",
+            "options": [
+                "anger",
+                "sadness",
+                "disgust",
+                "fear"
+            ]
+        },
+        {
+            "image": "fear/mamm_remember_negative_069.png",
+            "answer": "fear",
+            "options": [
+                "fear",
+                "anger",
+                "happiness",
+                "sadness"
+            ]
+        }
+    ]
+]
