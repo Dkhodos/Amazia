@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs/promises");
 
-const TARGET_DIR = path.resolve(__dirname, "../src/public/faces");
-const OUTPUT_DIR = path.resolve(__dirname, "../src/public");
+const TARGET_DIR = path.resolve(__dirname, "../public/faces");
+const OUTPUT_DIR = path.resolve(__dirname, "../public");
 
 const VARIATIONS_MAX = 20;
 const MAX_QUESTIONS = 10;
@@ -53,7 +53,6 @@ function getRandomItem(arr){
 
 function getRandomImage(all, subject, selected){
     let image = "";
-    let found = false;
 
     while(true){
         image = getRandomItem(all);
@@ -112,10 +111,13 @@ function getImages(subject){
 
             const image = getRandomImage(allImages, subject, images);
 
+            const imageData = await fs.readFile(path.resolve(__dirname,`../public/faces/${subject}/${image}`), {encoding: 'base64'})
+
             const otherAnswers = getRandomAnswers(options, subject);
 
             questions.push({
-                image: `${subject}/${image}`,
+                image: `faces/${subject}/${image}`,
+                imageData: imageData,
                 answer: subject,
                 options: shuffleArray([...otherAnswers, subject]),
             })

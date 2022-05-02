@@ -22,7 +22,7 @@ export default function Start() {
             <Main title={"Image " + step}>
                 <p><strong>Describe the emotion in the picture:</strong></p>
                 <Steps step={step} />
-                <QuestionImage src={questions[step].image}/>
+                <QuestionImage src={questions[step].imageData}/>
                 <Answers answer={questions[step].answer} options={questions[step].options} onRight={onRight}/>
             </Main>
         </Box>

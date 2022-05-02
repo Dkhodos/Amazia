@@ -1,5 +1,5 @@
 import classes from "./styles.module.css"
-import BearImage from "../../public/images/login/bear.png"
+import BearImage from "../../../public/images/login/bear.png"
 import {Button, FormControl} from "@mui/material"
 import TextInput from "../../components/TextInput"
 import useDelay from "../../hooks/useDelay"

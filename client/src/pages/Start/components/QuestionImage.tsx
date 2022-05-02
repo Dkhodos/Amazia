@@ -9,7 +9,7 @@ interface Props{
 export default function QuestionImage({src}:Props){
     return (
         <div className={classes.image}>
-            <img src={`/src/public/faces/${src}`} alt={"question image"}/>
+            <img src={"data:image/png;base64, "+src} alt={"question image"}/>
         </div>
     )
 }

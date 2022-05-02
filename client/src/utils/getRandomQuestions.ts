@@ -1,5 +1,5 @@
 import {Question} from "../@types/questions"
-import QuestionJson from "../public/questions.json"
+import QuestionJson from "../../public/questions.json"
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
