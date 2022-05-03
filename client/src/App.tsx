@@ -2,13 +2,16 @@ import './App.css'
 import Routes from "./pages/Routes"
 import React from 'react';
 import useLogin from "./hooks/useLogin";
+import AppContext from './context/context';
 
 function App() {
     useLogin();
 
     return (
         <div className="App">
-            <Routes/>
+            <AppContext>
+                <Routes/>
+            </AppContext>
         </div>
     )
 }

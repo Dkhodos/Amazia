@@ -12,19 +12,6 @@ async function safeDeleteDir(route){
 }
 
 (async() => {
-    await fs.mkdir(DEST);
-
-    const subjects = await fs.readdir(SRC);
-    for (const subject of subjects){
-        await fs.mkdir(path.join(DEST, subject));
-
-        const srcImageDir = path.join(SRC, subject);
-        const destImageDir = path.join(DEST, subject);
-
-        const images = await fs.readdir(path.join(srcImageDir));
-        for (const image of images){
-            await fs.copyFile(path.join(srcImageDir, image), path.join(destImageDir, image));
-        }
-    }
+    await safeDeleteDir()
 })();
 

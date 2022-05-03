@@ -5,17 +5,22 @@ import React, { useMemo, useState } from 'react';
 import {Steps} from "./components/Steps";
 import { Box } from "@mui/material";
 import getRandomQuestions from "../../utils/getRandomQuestions";
+import fetchQuestions from "./hooks/fetchQuestions";
+import { useAppContext } from "../../context/context";
 
 export default function Start() {
     const [step, setStep] = useState(1);
+    const isLoading = fetchQuestions()
 
-    const questions = useMemo(getRandomQuestions, []);
+    const {questions} = useAppContext();
 
     function onRight() {
         setStep(step + 1);
     }
 
-    console.log(questions);
+    if(isLoading){
+        return null;
+    }
 
     return (
         <Box>
