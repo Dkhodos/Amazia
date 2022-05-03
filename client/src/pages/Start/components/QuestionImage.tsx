@@ -1,4 +1,4 @@
-import image from "../../../public/images/faces/smiling_1.png"
+import image from "../../../../public/faces/anger/milf_disagree_046.png"
 import classes from "./commonStyle.module.css"
 import React from "react"
 
@@ -7,9 +7,16 @@ interface Props{
 }
 
 export default function QuestionImage({src}:Props){
+    function getSrc(){
+        // if(import.meta.env.MODE === "production"){
+        //     return `/assets/${src}`;
+        // }
+        return `public/${src}`
+    }
+
     return (
         <div className={classes.image}>
-            <img src={"data:image/png;base64, "+src} alt={"question image"}/>
+            <img src={getSrc()} alt={"question image"}/>
         </div>
     )
 }

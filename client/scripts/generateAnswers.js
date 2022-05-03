@@ -111,13 +111,10 @@ function getImages(subject){
 
             const image = getRandomImage(allImages, subject, images);
 
-            const imageData = await fs.readFile(path.resolve(__dirname,`../public/faces/${subject}/${image}`), {encoding: 'base64'})
-
             const otherAnswers = getRandomAnswers(options, subject);
 
             questions.push({
                 image: `faces/${subject}/${image}`,
-                imageData: imageData,
                 answer: subject,
                 options: shuffleArray([...otherAnswers, subject]),
             })
