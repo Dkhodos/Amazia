@@ -8,10 +8,10 @@ interface Props{
 
 export default function QuestionImage({src}:Props){
     function getSrc(){
-        // if(import.meta.env.MODE === "production"){
-        //     return `/assets/${src}`;
-        // }
-        return `public/${src}`
+        if(import.meta.env.MODE === "production"){
+            return `${src}`;
+        }
+        return src;
     }
 
     return (
