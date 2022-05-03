@@ -1,4 +1,3 @@
-import image from "../../../../public/faces/anger/milf_disagree_046.png"
 import classes from "./commonStyle.module.css"
 import React from "react"
 
