@@ -1,12 +1,11 @@
-echo "########  Building Client  ########"
-cd client
+Write-Output "########  Building Client  ########"
+Set-Location client
 npm run build
 
-echo "########  Moving Files to Server  ########"
-del /q ..\server\static 
-move static ../server
+Write-Output "########  Moving Files to Server  ########"
+Remove-Item /q ..\server\static 
+Move-Item static ../server
 
-echo "########  Moving Files to Server  ########"
-cd ..
-cd server
+Write-Output "########  Moving Files to Server  ########"
+Set-Location ../server
 npm run deploy
