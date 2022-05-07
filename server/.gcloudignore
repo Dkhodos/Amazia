@@ -3,3 +3,6 @@ src/*.js
 
 # Exclude dependencies
 node_modules/
+
+# Other
+ds_key.json
