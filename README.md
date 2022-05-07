@@ -3,10 +3,10 @@
 project description
 
 ## Dependencies
-### Install gcloud CLI
+1. Install gcloud CLI
 https://cloud.google.com/sdk/docs/install-sdk
 
-### Install dependencies 
+2. Install dependencies 
 ```shell
 cd server
 npm i
