@@ -1,6 +1,7 @@
 import express from 'express';
 import fs from "fs/promises";
 import path from "path";
+import { getRandomQuestions } from './questions.utils';
 
 const questionsView = express.Router();
 questionsView.use((req, res, next) => {
@@ -17,9 +18,19 @@ async function getQuestions(){
 
 // define the home page route
 questionsView.get('/',  async (req, res) => {
-    const questions = await getQuestions();;
+    const questions = await getQuestions();
+    const params = req.params;
 
-    res.json(questions[0]);
+    if(!("id" in params)){
+        res.json({
+            error: true,
+            msg: "Missing user ID!"
+        });
+    }
+
+    const randomIndex = await getRandomQuestions(questions.length, String((params as any).id));
+
+    res.json(questions[randomIndex]);
 });
 
 questionsView.get('/:index',  async (req, res) => {

@@ -3,7 +3,7 @@ import { Datastore, Key } from '@google-cloud/datastore';
 import path from "path";
 import console from "console";
 
-type Filters = Record<string,boolean | string | number>
+type Filters = Record<string,boolean | string | number | Key>
 
 interface GetDSProps{
     filters?: Filters,

@@ -1,12 +1,14 @@
 import 'dotenv/config'
 import express from "express";
 import apiView from './views';
+import userAgent from "express-useragent";
 
 // init express
 const app = express();
 
 // middleware
 app.use(express.json());
+app.use(userAgent.express());
 
 const port = process.env.PORT ?? 8000;
 

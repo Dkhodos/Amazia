@@ -1,4 +1,3 @@
-import console from 'console';
 import express from 'express';
 import Users, { User } from '../../db/Users';
 import { isValidUpdateParams } from './users.utils';
@@ -10,7 +9,7 @@ usersView.get('/:id',  async (req, res) => {
 
     const user = await (new Users().getWithId(id));
 
-    res.json(user);
+    res.json(user.data);
 });
 
 usersView.post('/',  async (req, res) => {

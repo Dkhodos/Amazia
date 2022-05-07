@@ -3,8 +3,6 @@ import DSEntity from "./DSEntity";
 export interface User{
     id: string,
     name: string,
-    currentQuiz: number | null
-    quizCompleted: number[]
 }
 
 export default class Users extends DSEntity<User>{
@@ -19,7 +17,7 @@ export default class Users extends DSEntity<User>{
             }
         });
 
-        return user ? user.data : null;
+        return user ?? null;
     }
 
     async createNewUser(id: string, name: string) {
@@ -31,8 +29,6 @@ export default class Users extends DSEntity<User>{
         const newUser:User = {
             id: String(id),
             name,
-            currentQuiz: null,
-            quizCompleted: []
         };
 
         try{
