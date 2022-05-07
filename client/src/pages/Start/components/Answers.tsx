@@ -8,7 +8,7 @@ import classes from "./commonStyle.module.css"
 interface Props {
     answer: string
     options: string[]
-    onRight: VoidFunction
+    onAnswer: (isRight: boolean) => void
 }
 
 const getDefaultStatus = (options: string[]) => {
@@ -21,7 +21,7 @@ const getDefaultStatus = (options: string[]) => {
 
 const Item = styled(Paper)(({theme}) => ({}));
 
-const Answers: React.FC<Props> = ({answer, options, onRight}) => {
+const Answers: React.FC<Props> = ({answer, options, onAnswer}) => {
     const [statuses, setStatuses] = useState<Record<string, Status>>({});
 
     function updateStatus(value: string, status: Status){
@@ -33,12 +33,8 @@ const Answers: React.FC<Props> = ({answer, options, onRight}) => {
     }
 
     function onSelect(value: string) {
-        if(value === answer){
-
-        }
-
         setTimeout(() => {
-            onRight();
+            onAnswer(value === answer);
         }, 1000);
     }
 

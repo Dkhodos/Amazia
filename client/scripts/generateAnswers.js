@@ -4,7 +4,7 @@ const fs = require("fs/promises");
 const TARGET_DIR = path.resolve(__dirname, "../public/faces");
 const OUTPUT_DIR = path.resolve(__dirname, "../public");
 
-const VARIATIONS_MAX = 20;
+const VARIATIONS_MAX = 40;
 const MAX_QUESTIONS = 10;
 
 async function getOptions(){

@@ -3,6 +3,10 @@ import Users, { User } from '../../db/Users';
 import { isValidUpdateParams } from './users.utils';
 
 const usersView = express.Router();
+usersView.use((req, res, next) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    next()
+})
 
 usersView.get('/:id',  async (req, res) => {
     const id = req.params.id;

@@ -1,3 +1,4 @@
+import console from 'console';
 import express from 'express';
 import fs from "fs/promises";
 import path from "path";
@@ -5,7 +6,8 @@ import { getRandomQuestions } from './questions.utils';
 
 const questionsView = express.Router();
 questionsView.use((req, res, next) => {
-    res.set('Cache-control', 'public, max-age=300');
+    //res.set('Cache-control', 'public, max-age=300');
+    res.set('Access-Control-Allow-Origin', '*');
     next()
 })
 
@@ -19,7 +21,9 @@ async function getQuestions(){
 // define the home page route
 questionsView.get('/',  async (req, res) => {
     const questions = await getQuestions();
-    const params = req.params;
+    const params = req.query;
+
+    console.log(params);
 
     if(!("id" in params)){
         res.json({

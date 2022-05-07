@@ -8,8 +8,9 @@ import React, { useState } from "react"
 import Main from "../../components/Main"
 import { Navigate } from 'react-router-dom';
 import useLoginState from "./hooks/useLoginState";
-import {setLogin} from "../../hooks/useLogin";
+import {getLogin, setLogin} from "../../hooks/useLogin";
 import isIsraeliIDNumber from "../../utils/isIsraeliIDNumber";
+import Users from "../../services/users"
 
 const styles = {
     root : classes.modal
@@ -21,18 +22,6 @@ export default function Login() {
     const welcome = useDelay(200);
     const [redirect, setRedirect] = useState(false);
     const {name, id, setUser, errors, setErrors} = useLoginState();
-
-    function onIdChange(id: string){
-        if(id.match(ID_PATTERN)){
-            setUser(name, id);
-            setErrors({id: ""});
-        } else {
-            setErrors({
-                id: "invalid id!"
-            });
-        }
-    }
-
 
     function onLogin(){
         if(!id.match(ID_PATTERN)){
@@ -50,8 +39,14 @@ export default function Login() {
         }
 
         setErrors({name: "", id: ""});
-        setLogin(name, id);
-        setRedirect(true);
+
+        Users.set(name, id).then(() => {
+            setRedirect(true);
+            setLogin(name, id);
+        }).catch((e) => {
+            setErrors({id: e ? e.msg : "Something went wrong :("});
+        })
+
     }
 
     if(redirect){

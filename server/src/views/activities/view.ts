@@ -3,6 +3,10 @@ import Activities from '../../db/Activities';
 import { isValidActivity } from './activities.utils';
 
 const activityView = express.Router();
+activityView.use((req, res, next) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    next()
+})
 
 activityView.post("/", async (req, res) => {
     const {id, ...activity} = req.body;

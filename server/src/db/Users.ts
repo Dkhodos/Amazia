@@ -23,7 +23,7 @@ export default class Users extends DSEntity<User>{
     async createNewUser(id: string, name: string) {
         const isExist = Boolean(await this.getWithId(id));
         if(isExist){
-            return null;
+            return this.updateById(id, {name});
         }
 
         const newUser:User = {
