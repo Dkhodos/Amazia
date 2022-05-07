@@ -34,7 +34,10 @@ questionsView.get('/',  async (req, res) => {
 
     const randomIndex = await getRandomQuestions(questions.length, String((params as any).id));
 
-    res.json(questions[randomIndex]);
+    res.json({
+        questions: questions[randomIndex],
+        index: randomIndex
+    });
 });
 
 questionsView.get('/:index',  async (req, res) => {
@@ -42,7 +45,15 @@ questionsView.get('/:index',  async (req, res) => {
 
     const index = Number(req.params.index);
     if(questions[index]){
-        res.json(questions[index]);
+        res.json({
+            questions: questions[index],
+            index,
+        });
+    } else {
+        res.json({
+            error: "true",
+            msg: "Invalid index!"
+        })
     }
 });
 

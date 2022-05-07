@@ -3,14 +3,23 @@ import { Question } from "../@types/questions";
 import { getLogin } from "../hooks/useLogin";
 import { API_URL } from "./api";
 
+interface QuestionsResponse{
+    index: number,
+    questions: Question[]
+}
 
 const Questions = {
-    get(){
-        return axios.get<Question[]>(`${API_URL}/questions`,{
-            params: {
-                id: getLogin().id,
-            }
-        })
+    get(index?: number){
+        if(!index){
+            return axios.get<QuestionsResponse>(`${API_URL}/questions`,{
+                params: {
+                    id: getLogin().id,
+                }
+            })
+        }
+
+        return axios.get<QuestionsResponse>(`${API_URL}/questions/${index}`);
+
     }
 }
 

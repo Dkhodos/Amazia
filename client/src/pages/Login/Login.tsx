@@ -8,7 +8,7 @@ import React, { useState } from "react"
 import Main from "../../components/Main"
 import { Navigate } from 'react-router-dom';
 import useLoginState from "./hooks/useLoginState";
-import {getLogin, setLogin} from "../../hooks/useLogin";
+import {setLogin} from "../../hooks/useLogin";
 import isIsraeliIDNumber from "../../utils/isIsraeliIDNumber";
 import Users from "../../services/users"
 

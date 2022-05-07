@@ -9,9 +9,11 @@ import {fetchQuestions} from "../../store/reducers/root/root.action";
 import { selectLoaders, selectQuestions } from "../../store/reducers/root/root.selectors";
 import usePreloadImages from "./hooks/usePreloadImages";
 import { updateLogs } from "../../store/reducers/root";
+import useSavedSession from "./hooks/useSavedSession";
 
 export default function Start() {
     const dispatch = useAppDispatch();
+    const {clear, getSession, updateSession} = useSavedSession();
 
     const [step, setStep] = useState<number>(0);
 

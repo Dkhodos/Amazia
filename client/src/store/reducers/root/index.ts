@@ -4,6 +4,7 @@ import { fetchQuestions } from "./root.action";
 
 interface RootState{
     questions: Question[],
+    questionsIndex: number,
     logs: boolean[]
     loaders: {
         questions: boolean
@@ -15,6 +16,7 @@ interface RootState{
 
 const defaultState:RootState = {
     questions: [],
+    questionsIndex: -1,
     logs: [],
     loaders: {
         questions: false,
@@ -42,7 +44,9 @@ const rootSlice = createSlice({
 
         builder.addCase(fetchQuestions.fulfilled, (state, action) => {
             state.loaders.questions = false;
-            state.questions = action.payload;
+
+            state.questions = action.payload.questions;
+            state.questionsIndex = action.payload.index;
         });
     }
   })
