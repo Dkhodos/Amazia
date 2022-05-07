@@ -2,11 +2,11 @@
 
 project description
 
-# Dependencies
-## Install gcloud CLI
+## Dependencies
+### Install gcloud CLI
 https://cloud.google.com/sdk/docs/install-sdk
 
-## Install dependencies 
+### Install dependencies 
 ```shell
 cd server
 npm i
@@ -14,19 +14,19 @@ cd ../client
 npm i
 ```
 
-# Run server
+## Run server
 ```shell
 cd server
 npm run dev
 ```
 
-# Run client
+## Run client
 ```shell
 cd client
 npm run dev
 ```
 
-# Deploy
+## Deploy
 ```shell
  ./buildAndDeploy.ps1
 ```
