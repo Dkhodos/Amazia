@@ -4,8 +4,8 @@ import Questions from "../../../services/questions";
 
 export const fetchQuestions = createAsyncThunk(
     'questions/fetch',
-    async () => {
-      const response = await Questions.get();
+    async ({quizIndex}:{quizIndex: number | null }) => {
+      const response = await Questions.get(quizIndex ?? undefined);
 
       return response.data;
     }

@@ -7,7 +7,8 @@ import { getRandomQuestions } from './questions.utils';
 const questionsView = express.Router();
 questionsView.use((req, res, next) => {
     //res.set('Cache-control', 'public, max-age=300');
-    res.set('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
     next()
 })
 

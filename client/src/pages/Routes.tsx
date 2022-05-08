@@ -4,6 +4,7 @@ import Login from "./Login";
 import Start from "./Start";
 import React from 'react';
 import useLogin from "../hooks/useLogin";
+import Completed from "./Completed";
 
 export default function Routes(){
     useLogin();
@@ -12,6 +13,7 @@ export default function Routes(){
         <BrowserRoutes>
             <Route path="/login" element={<Login/>}/>
             <Route path="/start" element={<Start/>}/>
+            <Route path="/completed" element={<Completed/>}/>
             <Route path="/" element={<Home/>}/>
         </BrowserRoutes>
     )

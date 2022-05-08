@@ -1,10 +1,12 @@
+import console from 'console';
 import express from 'express';
 import Users, { User } from '../../db/Users';
 import { isValidUpdateParams } from './users.utils';
 
 const usersView = express.Router();
 usersView.use((req, res, next) => {
-    res.set('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
     next()
 })
 

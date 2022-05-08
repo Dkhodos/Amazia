@@ -11,6 +11,7 @@ import useLoginState from "./hooks/useLoginState";
 import {setLogin} from "../../hooks/useLogin";
 import isIsraeliIDNumber from "../../utils/isIsraeliIDNumber";
 import Users from "../../services/users"
+import Loader from "../../components/Loader"
 
 const styles = {
     root : classes.modal
@@ -22,6 +23,7 @@ export default function Login() {
     const welcome = useDelay(200);
     const [redirect, setRedirect] = useState(false);
     const {name, id, setUser, errors, setErrors} = useLoginState();
+    const [isLoading, setLoading] = useState(false);
 
     function onLogin(){
         if(!id.match(ID_PATTERN)){
@@ -39,12 +41,15 @@ export default function Login() {
         }
 
         setErrors({name: "", id: ""});
+        setLoading(true);
 
         Users.set(name, id).then(() => {
             setRedirect(true);
             setLogin(name, id);
         }).catch((e) => {
             setErrors({id: e ? e.msg : "Something went wrong :("});
+        }).finally(() => {
+            setLoading(false);
         })
 
     }
@@ -55,6 +60,7 @@ export default function Login() {
 
     return (
         <Main title={"Login"} classes={styles}>
+            {isLoading ? <Loader/> : null}
             <FormControl variant="standard">
                 <div className={classes.view}>
                     <div className={classes.inputs}>

@@ -1,13 +1,16 @@
-import { useEffect } from "react";
-
-const STEP_LS_KEY = "step_session_saved";
-const LOGS_LS_KEY = "logs_session_saved"
+const AMAZIA_SESSION_LS_KEY = "saved-amazia-session"
 
 const TIMEOUT = 360;
 
-interface LSData<T>{
+export interface AmaziaSessionProps{
     timer: number,
-    payload: T
+    payload: LSPayload
+}
+
+interface LSPayload{
+    step: number,
+    logs: boolean[],
+    quizIndex: number
 }
 
 
@@ -17,44 +20,48 @@ export default function useSavedSession() {
     }
 
     function clear(){
-        localStorage.removeItem(LOGS_LS_KEY);
-        localStorage.removeItem(STEP_LS_KEY);
+        localStorage.removeItem(AMAZIA_SESSION_LS_KEY);
     }
 
-    function get<T>(key: string): LSData<T> | null{
-        const item = localStorage.getItem(key);
+    function get():LSPayload | null{
+        const item = localStorage.getItem(AMAZIA_SESSION_LS_KEY);
         if(!item){
             return null;
         }
 
-        const parsed = JSON.parse(item) as LSData<T>
+        const parsed = JSON.parse(item) as AmaziaSessionProps
         const now = getNow();
         if(parsed.timer <= now){
             clear();
             return null;
         }
 
-        return parsed;
+        return parsed.payload;
     }
 
-    function set<T>(key: string, value: T){
-        const now = getNow();
-        
-        localStorage.setItem(key,JSON.stringify({
-            timer: now,
+    function set(value: LSPayload){        
+        localStorage.setItem( AMAZIA_SESSION_LS_KEY,JSON.stringify({
+            timer: getNow() + TIMEOUT,
             payload: value
-        } as LSData<T>));
+        } as AmaziaSessionProps));
     }
 
     return {
-        clear,
-        getSession: () => ({
-            step: get<number>(STEP_LS_KEY),
-            logs: get<number[]>(LOGS_LS_KEY)
-        }),
-        updateSession: (step: number, logs: number[]) => {
-            set<number>(STEP_LS_KEY, step);
-            set<number[]>(LOGS_LS_KEY, logs);
-        }
+        clearSession: clear,
+        getSession: () => {
+
+            const session = get();
+
+            return {
+                step: session ? session.step : null,
+                logs: session ? session.logs : null,
+                quizIndex: session ? session.quizIndex : null,
+            }
+        },
+        updateSession: (step: number, logs: boolean[], quizIndex: number) => {
+            set({
+                step, logs, quizIndex
+            })
+        },
     }
 }

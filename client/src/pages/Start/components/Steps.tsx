@@ -2,25 +2,59 @@ import React from "react"
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepButton from '@mui/material/StepButton';
-import Typography from '@mui/material/Typography';
+import styled from "@emotion/styled";
+import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 interface Props{
     step: number
     total?: number
+    logs: boolean[]
 }
 
 function getSteps(total: number): number[]{
   return Array(total).fill(0).reduce((arr) => {arr.push(arr.length + 1); return arr}, [])
 }
 
-export const Steps:React.FC<Props> = ({step, total = 10}) => {
+export const Steps:React.FC<Props> = ({step, total = 10, logs}) => {
     return (
-        <Stepper nonLinear activeStep={step - 1}>
+        <StyledStepper nonLinear activeStep={step - 1}>
           {getSteps(total).map((index: number) => (
             <Step key={index} completed={step > index} >
-              <StepButton color="inherit"/>
+              <StepButton color="inherit" icon={isIcon(step, index, logs) ? <StepIcon index={index} logs={logs} step={step}/> : undefined}/>
             </Step>
           ))}
-        </Stepper>
+        </StyledStepper>
     )
 }
+
+const isIcon = (step: number,index: number, logs: boolean[]) => step > index && (typeof logs[index - 1] === "boolean");
+
+const StepIcon = ({logs, index, step}:{logs: boolean[], index: number, step: number}) => {
+  if(logs[index - 1]){
+    return <CompletedIcon/> 
+  }
+
+  if(!logs[index - 1]){
+    return <FailedIcon/>
+  }
+
+  return null;
+}
+
+
+const CompletedIcon = styled(CheckCircleRoundedIcon)`
+  fill: darkgreen;
+  height: 24px !important;
+  width: 24px !important;
+`;
+
+const FailedIcon = styled(ErrorOutlineRoundedIcon)`
+  fill: red;
+  height: 24px !important;
+  width: 24px !important;
+`;
+
+const StyledStepper = styled(Stepper)`
+  margin: 20px 10px;
+`

@@ -4,7 +4,8 @@ import { isValidActivity } from './activities.utils';
 
 const activityView = express.Router();
 activityView.use((req, res, next) => {
-    res.set('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
     next()
 })
 

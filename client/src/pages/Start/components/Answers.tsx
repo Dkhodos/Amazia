@@ -35,7 +35,7 @@ const Answers: React.FC<Props> = ({answer, options, onAnswer}) => {
     function onSelect(value: string) {
         setTimeout(() => {
             onAnswer(value === answer);
-        }, 1000);
+        }, 500);
     }
 
     useEffect(() => {
@@ -75,12 +75,6 @@ interface AnswerProps{
 const Answer: React.FC<AnswerProps> = ({name, onSelect, isAnswer, status, updateStatus}) => {
     function onClick() {
         updateStatus(name, isAnswer ? Status.Right : Status.Wrong);
-        if (!isAnswer) {
-            setTimeout(() => {
-                onSelect();
-            }, 600);
-            return ''
-        }
         onSelect();
     }
 
