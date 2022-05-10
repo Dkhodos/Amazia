@@ -44,7 +44,13 @@ export default function Login() {
         }).finally(() => {
             setLoading(false);
         })
+    }
 
+
+    function onSubmit(event: React.KeyboardEvent<HTMLDivElement>){
+        if(event.key === "Enter"){
+            onLogin();
+        }
     }
 
     if(redirect){
@@ -54,12 +60,12 @@ export default function Login() {
     return (
         <LoginMain title={"Login"}>
             {isLoading ? <Loader/> : null}
-            <Form variant="standard">
+            <Form variant="standard" onSubmit={onSubmit}>
                 <View>
                     <InputsWrapper>
-                        <Input label="Name / שם" value={name} onChange={e => setUser(e.target.value, id)} required/>
+                        <Input label="Name / שם" value={name} onChange={e => setUser(e.target.value, id)} onKeyDown={onSubmit} required/>
                         <Input  label='Israeli ID / ת"ז' value={id} onChange={e => setUser(name, e.target.value)} required  inputProps={{pattern: ID_PATTERN}}
-                                error={Boolean(errors.id)} helperText={errors.id} />
+                                error={Boolean(errors.id)} helperText={errors.id} onKeyDown={onSubmit}/>
                     </InputsWrapper>
 
                     <Buttons>
