@@ -20,9 +20,9 @@ export const Steps:React.FC<Props> = ({step, total = 10, logs}) => {
     return (
         <StyledStepper nonLinear activeStep={step - 1}>
           {getSteps(total).map((index: number) => (
-            <Step key={index} completed={step > index} >
+            <StyledStep key={index} completed={step > index} >
               <StepButton color="inherit" icon={isIcon(step, index, logs) ? <StepIcon index={index} logs={logs} step={step}/> : undefined}/>
-            </Step>
+            </StyledStep>
           ))}
         </StyledStepper>
     )
@@ -57,4 +57,15 @@ const FailedIcon = styled(ErrorOutlineRoundedIcon)`
 
 const StyledStepper = styled(Stepper)`
   margin: 20px 10px;
+
+  @media only screen and (max-width: 300px) {
+    display: none;
+  }
+`
+
+const StyledStep = styled(Step)`
+  @media only screen and (max-width: 550px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `
