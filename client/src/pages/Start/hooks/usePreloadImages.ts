@@ -2,15 +2,16 @@ import { useEffect, useMemo } from "react";
 import { useAppSelector } from "../../../store";
 import { selectQuestions } from "../../../store/reducers/root/root.selectors";
 
-function preload(index: number, src: string){
-    const imageID = `image_preloader_${index}_${Date.now()}`;
+function preload(src: string){
+    const img = new Image();
 
-    const image = document.createElement("div");
+    if(import.meta.env.MODE === "production"){
+        img.src = src;
+    } else{
+        img.src = "/public/" + src;
+    }
 
-    image.id = imageID;
-    image.style.background = `url(${src}) no-repeat -9999px -9999px`
-
-    document.head.appendChild(image);
+    img.onload = () => console.log(`preload ${src}`);
 }
 
 export default function usePreloadImages(){
@@ -21,8 +22,14 @@ export default function usePreloadImages(){
     },[questions])
 
     useEffect(() => {
-        images.forEach((value, index) => {
-            preload(index + 1, value);
+        if(images.length === 0){
+            return;
+        }
+
+        console.log("Preloading images...");
+
+        images.forEach((value) => {
+            preload(value);
         });
     },[images])
 }
