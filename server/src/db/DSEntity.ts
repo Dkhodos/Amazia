@@ -22,15 +22,20 @@ interface Entity<T>{
 
 
 function newDatastore(){
-    if(process.env.NODE_ENV === 'production'){
-        return new Datastore();
-    } else {
-        return new Datastore({
-            // @ts-ignore
-            projectId: 'adept-bridge-349115',
-            keyFilename: path.resolve(__dirname, "../../ds_key.json")
-        });
+    try{
+        if(process.env.NODE_ENV === 'production'){
+            return new Datastore();
+        } else {
+            return new Datastore({
+                // @ts-ignore
+                projectId: 'adept-bridge-349115',
+                keyFilename: path.resolve(__dirname, "../../ds_key.json")
+            });
+        }
+    } catch (e){
+        throw new Error(e);
     }
+
 }
 
 export default abstract class DSEntity<T>{

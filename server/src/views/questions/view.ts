@@ -14,7 +14,7 @@ questionsView.use((req, res, next) => {
 
 
 async function getQuestions(){
-    const questions = await fs.readFile(path.resolve(__dirname, "./questions.json"), 'utf-8');
+    const questions = await fs.readFile(path.resolve(__dirname, "../../../assets/questions.json"), 'utf-8');
 
     return JSON.parse(questions);
 }
