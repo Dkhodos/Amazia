@@ -16,8 +16,6 @@ function random(max:number, ignore: number[]){
 }
 
 export async function getRandomQuestions(max: number, id: string){
-    const ds = DSEntity.getDatastore();
-
     const ignore = (await (new Activities()).getUserActivities(id));
 
     return random(max, ignore);

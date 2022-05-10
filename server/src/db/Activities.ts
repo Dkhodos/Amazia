@@ -18,7 +18,7 @@ export default class Activities extends DSEntity<Activity>{
     }
 
     async addActivity(id: string, activity: Omit<Activity, "date" | "user" | "userAgent">, userAgent: string){
-        const user = await ((new Users()).getWithId(id));
+        const user = await ((new Users(this.datastore)).getWithId(id));
 
         if(!user){
             console.error("No user found for " +id);
@@ -26,8 +26,7 @@ export default class Activities extends DSEntity<Activity>{
             return null;
         }
 
-        const ds = DSEntity.getDatastore();
-        const key = ds.key(["Users", user.meta.keyId])
+        const key = this.datastore.key(["Users", user.meta.keyId])
 
         const newActivity:Activity = {
             ...activity,
@@ -46,20 +45,19 @@ export default class Activities extends DSEntity<Activity>{
     }
 
     async getUserActivities(id: string): Promise<number[]>{
-        const user = await ((new Users()).getWithId(id));
+        const user = await ((new Users(this.datastore)).getWithId(id));
 
         if(!user){
             return [];
         }
 
-        const ds = DSEntity.getDatastore();
-        const key = ds.key(["Users", user.meta.keyId])
+        const key = this.datastore.key(["Users", user.meta.keyId])
 
-        const activities = await ((new Activities()).fetch({
+        const activities = await this.fetch({
             filters: {
                 user: key
             }
-        }));
+        });
 
         return activities ? activities.map(activity => activity.data.quizIndex) : []
     }

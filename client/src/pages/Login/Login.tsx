@@ -78,11 +78,7 @@ export default function Login() {
                     </div>
 
                     <div className={classes.bottom}>
-                        <p>
-                            We connect people who make community for
-                            a better world
-                            of changes
-                        </p>
+                        <p>Welcome!</p>
                         <img src={BearImage} alt={'login bear'} className={clsx(classes.bear, {[classes.welcome]: welcome})}/>
                     </div>
                 </div>

@@ -10,11 +10,20 @@ const app = express();
 app.use(express.json());
 app.use(userAgent.express());
 
-const port = process.env.PORT ?? 8000;
+const port = process.env.PORT ?? 8080;
 
 app.get("/", (req, res) => {
     res.send('Hello World!')
 })
+
+app.get("/_ah/health", (req, res) => {
+    res.send('OK!')
+})
+
+app.get("/_ah/start", (req, res) => {
+    res.send('OK!')
+})
+
 
 app.use("/api", apiView);
 

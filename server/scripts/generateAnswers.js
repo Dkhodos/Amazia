@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs/promises");
 
-const TARGET_DIR = path.resolve(__dirname, "../public/faces");
-const OUTPUT_DIR = path.resolve(__dirname, "../public");
+const TARGET_DIR = path.resolve(__dirname, "../../client/public/faces");
+const OUTPUT_DIR = path.resolve(__dirname, "../src/views/questions");
 
 const VARIATIONS_MAX = 40;
 const MAX_QUESTIONS = 10;

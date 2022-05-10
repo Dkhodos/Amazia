@@ -1,6 +1,13 @@
 runtime: nodejs14
+instance_class: F1
 
 handlers:
+  - url : /_ah/health
+    script: auto
+
+  - url : /_ah/start
+    script: auto
+
   - url: /api/.*
     script: auto
 
@@ -13,10 +20,3 @@ handlers:
   - url: /.*
     static_files: static/index.html
     upload: static/index.html
-
-manual_scaling:
-  instances: 1
-resources:
-  cpu: 1
-  memory_gb: 0.5
-  disk_size_gb: 10

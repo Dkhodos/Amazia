@@ -9,3 +9,4 @@ Move-Item static ../server
 Write-Output "########  Uploading to GAE  ########"
 Set-Location ../server
 npm run deploy
+cd..

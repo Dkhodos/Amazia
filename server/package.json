@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "nodemon src/main.ts",
+    "start": "node dist/main.js ",
     "prepare": "npm run gcp-build",
     "lint": "tslint -p .",
     "gcp-build": "tsc -p .",
