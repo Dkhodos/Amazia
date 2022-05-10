@@ -10,7 +10,8 @@
     "predeploy": "npm run prepare",
     "lint": "tslint -p .",
     "gcp-build": "tsc -p .",
-    "deploy": "gcloud app deploy --no-cache --quiet --promote --version=develop"
+    "deploy": "gcloud app deploy --no-cache --quiet --promote --version=develop",
+    "generate": "ts-node scripts/generateAnswers.ts"
   },
   "author": "",
   "license": "ISC",
