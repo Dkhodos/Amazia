@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React, { useEffect, useMemo} from 'react';
 import Main from "../../components/Main";
 import { useAppDispatch, useAppSelector } from "../../store";
-import { selectLogs, selectQuestionsIndex, selectVictory } from "../../store/reducers/root/root.selectors";
+import { selectLogs, selectQuestionsIndex, selectTime, selectVictory } from "../../store/reducers/root/root.selectors";
 import {Button} from "@mui/material"
 import { Navigate } from "react-router-dom";
 import { resetChallenge } from "../../store/reducers/root";
@@ -18,6 +18,7 @@ const Completed = () => {
     const logs = useAppSelector(selectLogs);
     const victory = useAppSelector(selectVictory);
     const quizIndex = useAppSelector(selectQuestionsIndex);
+    const time = useAppSelector(selectTime);
 
     const correct = useMemo(() => {
         return logs.filter(log => log).length;
@@ -37,9 +38,9 @@ const Completed = () => {
                 id: userID,
                 logs,
                 quizIndex,
-                time: 30
+                time: time
             }).then(() => {
-                console.log(`%creported: id: ${userID} | score: ${correct}/${logs.length} | quizIndex: ${quizIndex}`, 'font-width:bold;')
+                console.log(`%creported: id: ${userID} | score: ${correct}/${logs.length} | quizIndex: ${quizIndex} | time: ${time}s`, 'font-width:bold;')
             })
         }
     },[])

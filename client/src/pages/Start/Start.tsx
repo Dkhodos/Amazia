@@ -8,10 +8,11 @@ import { useAppDispatch, useAppSelector } from "../../store";
 import {fetchQuestions} from "../../store/reducers/root/root.action";
 import { selectLoaders, selectLogs, selectQuestions, selectQuestionsIndex, selectVictory } from "../../store/reducers/root/root.selectors";
 import usePreloadImages from "./hooks/usePreloadImages";
-import { setLogs, setVictory, updateLogs } from "../../store/reducers/root";
+import { setLogs, setTime, setVictory, updateLogs } from "../../store/reducers/root";
 import useSavedSession from "./hooks/useSavedSession";
 import { Navigate } from "react-router-dom";
 import Loader from "../../components/Loader";
+import useTimer from "../../hooks/useTimer";
 
 export default function Start() {
     const dispatch = useAppDispatch();
@@ -28,10 +29,20 @@ export default function Start() {
     const quizIndex = useAppSelector(selectQuestionsIndex);
     const victory = useAppSelector(selectVictory);
     const {questions: isLoading} = useAppSelector(selectLoaders);
+    const {start: startTimer, stop: stopTimer, time, set: setTimer} = useTimer();
 
 
     usePreloadImages();
 
+    /* start timer */
+    useEffect(() => {
+        const {time} = getSession();
+
+        setTimer(time ?? 0);
+        startTimer();
+    },[]);
+
+    /* fetch questions from server*/
     useEffect(() => {
         const {quizIndex} = getSession();
 
@@ -42,10 +53,11 @@ export default function Start() {
         }
     },[]);
 
+    /* save session logs */
     useEffect(() => {
         const {logs} = getSession();
         if(logs){
-            dispatch(setLogs(logs))
+            dispatch(setLogs(logs));
         }
     },[]);
 
@@ -56,13 +68,23 @@ export default function Start() {
             status: isRight
         }));
 
-        console.log(step, questions.length)
+        dispatch(setTime(time));
 
         if(step + 1 !== questions.length){
             setStep(step + 1);
-            updateSession(step+1, [...logs, isRight], quizIndex);
+            updateSession({
+                step:step+1,
+                logs:[...logs, isRight],
+                quizIndex,
+                time
+            });
         } else {
-            updateSession(step, [...logs, isRight], quizIndex);
+            updateSession({
+                step,
+                logs:[...logs, isRight],
+                quizIndex,
+                time
+            });
             dispatch(setVictory(true));
         }
     }

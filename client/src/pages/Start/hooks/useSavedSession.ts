@@ -11,6 +11,7 @@ interface LSPayload{
     step: number,
     logs: boolean[],
     quizIndex: number
+    time: number
 }
 
 
@@ -56,12 +57,11 @@ export default function useSavedSession() {
                 step: session ? session.step : null,
                 logs: session ? session.logs : null,
                 quizIndex: session ? session.quizIndex : null,
+                time: session ? session.time : null,
             }
         },
-        updateSession: (step: number, logs: boolean[], quizIndex: number) => {
-            set({
-                step, logs, quizIndex
-            })
+        updateSession: (props: LSPayload) => {
+            set(props);
         },
     }
 }

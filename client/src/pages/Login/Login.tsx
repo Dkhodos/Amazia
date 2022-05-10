@@ -1,4 +1,3 @@
-import classes from "./styles.module.css"
 import {Button, FormControl} from "@mui/material"
 import React, { useState } from "react"
 import Main from "../../components/Main"
@@ -11,10 +10,6 @@ import Loader from "../../components/Loader"
 import styled from '@emotion/styled'
 import Input from "./components/Input"
 import BearImage from "./components/BearImage"
-
-const styles = {
-    root : classes.modal
-}
 
 const ID_PATTERN = "[0-9]{9}"
 
@@ -57,7 +52,7 @@ export default function Login() {
     }
 
     return (
-        <Main title={"Login"} classes={styles}>
+        <LoginMain title={"Login"}>
             {isLoading ? <Loader/> : null}
             <Form variant="standard">
                 <View>
@@ -77,7 +72,7 @@ export default function Login() {
                     </Bottom>
                 </View>
             </Form>
-        </Main>
+        </LoginMain>
     )
 }
 
@@ -107,4 +102,8 @@ const WelcomeMessage = styled.p`
 
 const Form = styled(FormControl)`
     width: 100%;
+`;
+
+const LoginMain = styled(Main)`
+    width: min(600px, 90vw);
 `;

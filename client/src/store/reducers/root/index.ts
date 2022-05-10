@@ -5,6 +5,7 @@ import { fetchQuestions } from "./root.action";
 interface RootState{
     questions: Question[],
     questionsIndex: number,
+    time: number,
     victory: boolean
     logs: boolean[]
     loaders: {
@@ -18,6 +19,7 @@ interface RootState{
 const defaultState:RootState = {
     questions: [],
     questionsIndex: -1,
+    time: 0,
     victory: false,
     logs: [],
     loaders: {
@@ -37,8 +39,13 @@ const rootSlice = createSlice({
 
             state.logs[index] = status;
         },
+
         setLogs: (state, action: PayloadAction<boolean[]>) => {
             state.logs = action.payload;
+        },
+
+        setTime:(state, action: PayloadAction<number>) => {
+            state.time = action.payload;
         },
 
         setVictory:(state, action: PayloadAction<boolean>) => {
@@ -62,6 +69,6 @@ const rootSlice = createSlice({
     }
   })
 
-  export const {updateLogs, setLogs, setVictory, resetChallenge} = rootSlice.actions;
+  export const {updateLogs, setLogs, setVictory, resetChallenge, setTime} = rootSlice.actions;
 
   export default rootSlice;
