@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Paper, PaperProps, Stack} from "@mui/material";
+import {Button, ButtonProps, Stack} from "@mui/material";
 import styled from "@emotion/styled";
 
 interface Props {
@@ -87,17 +87,19 @@ const Answer: React.FC<AnswerProps> = ({name, onSelect, isAnswer, status, update
         backgroundColor = "#cf2727"
     }
 
-    return <Item onClick={onClick} color={color} backgroundColor={backgroundColor}>
+    return <Item onClick={onClick} textColor={color} backgroundColor={backgroundColor}>
         {name}
     </Item>
 }
 
-interface ItemProps extends PaperProps{
-    color: string,
+interface ItemProps extends ButtonProps{
+    textColor: string,
     backgroundColor: string
 }
 
-const Item = styled(Paper)<ItemProps>`
+const ItemButton = (props: ButtonProps) => <Button {...props} variant="text"/>
+
+const Item = styled(ItemButton)<ItemProps>`
     text-align: center;
     color: black;
     height: 40px;
@@ -109,12 +111,10 @@ const Item = styled(Paper)<ItemProps>`
     font-weight: bold;
     transition:  .2s background-color ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out !important;
     text-transform: capitalize;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 
-    &:hover{
-        background-color: #eee;
-    }
-
-    color: ${(props) => props.color};
+    color: ${(props) => props.textColor};
     background-color: ${(props) => props.backgroundColor} !important;
 `
 
