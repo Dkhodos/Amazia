@@ -11,6 +11,7 @@ import Activities from "../../services/activities";
 import { getLogin } from "../../hooks/useLogin";
 import styled from "@emotion/styled";
 import VictoryImageSRC from "../../../public/images/completed/victory.gif"
+import getSession from "../../utils/getSession";
 
 const Completed = () => {
     const dispatch = useAppDispatch();
@@ -38,7 +39,8 @@ const Completed = () => {
                 id: userID,
                 logs,
                 quizIndex,
-                time: time
+                time: time,
+                session: getSession()
             }).then(() => {
                 console.log(`%creported: id: ${userID} | score: ${correct}/${logs.length} | quizIndex: ${quizIndex} | time: ${time}s`, 'font-width:bold;')
             })

@@ -6,6 +6,7 @@ interface AddProps{
     logs: boolean[]
     time: number
     quizIndex: number
+    session: number
 }
 
 

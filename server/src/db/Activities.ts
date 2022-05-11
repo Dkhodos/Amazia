@@ -10,6 +10,7 @@ export interface Activity{
     date: number //timestamp (ISR)
     time: number // minutes
     userAgent: string
+    session: number
 }
 
 export default class Activities extends DSEntity<Activity>{
