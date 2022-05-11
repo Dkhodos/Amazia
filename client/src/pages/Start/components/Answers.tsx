@@ -1,5 +1,4 @@
-import React, {useEffect, useMemo, useState} from "react";
-import shuffleArray from "../../../utils/shuffle";
+import React, {useEffect, useState} from "react";
 import {Paper, Stack} from "@mui/material";
 import styled from "@emotion/styled";
 import clsx from "clsx";

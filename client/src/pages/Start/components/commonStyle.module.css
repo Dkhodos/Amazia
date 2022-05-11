@@ -23,6 +23,7 @@
     cursor: pointer;
     font-weight: bold;
     transition:  .2s background-color ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out !important;
+    text-transform: capitalize;
 }
 
 .answer:hover {

@@ -8,3 +8,7 @@
 .MuiTextField-root{
   width: 100%;
 }
+
+body *{
+  font-family: 'Assistant', sans-serif;
+}
