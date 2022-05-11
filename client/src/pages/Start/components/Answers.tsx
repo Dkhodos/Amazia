@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {Paper, Stack} from "@mui/material";
+import {Paper, PaperProps, Stack} from "@mui/material";
 import styled from "@emotion/styled";
-import clsx from "clsx";
-import classes from "./commonStyle.module.css"
 
 interface Props {
     answer: string
@@ -17,8 +15,6 @@ const getDefaultStatus = (options: string[]) => {
         return statuses;
     }, {} as Record<string, Status>);
 }
-
-const Item = styled(Paper)(({theme}) => ({}));
 
 const Answers: React.FC<Props> = ({answer, options, onAnswer}) => {
     const [statuses, setStatuses] = useState<Record<string, Status>>({});
@@ -77,11 +73,44 @@ const Answer: React.FC<AnswerProps> = ({name, onSelect, isAnswer, status, update
         onSelect();
     }
 
-    return <Item onClick={onClick}
-                 className={clsx(classes.answer, {[classes.rightAnswer]: status === Status.Right},
-                     {[classes.wrongAnswer]: status === Status.Wrong})}>
+    let color = ""; 
+    let backgroundColor =""; 
+
+    if(status === Status.Right){
+        color = "white";
+        backgroundColor = "#31a431"
+    }
+
+    if(status === Status.Wrong){
+        color = "white";
+        backgroundColor = "#cf2727"
+    }
+
+    return <Item onClick={onClick} color={color} backgroundColor={backgroundColor}>
         {name}
     </Item>
 }
+
+interface ItemProps extends PaperProps{
+    color: string,
+    backgroundColor: string
+}
+
+const Item = styled(Paper)<ItemProps>`
+    text-align: center;
+    color: black;
+    height: 40px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition:  .2s background-color ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out !important;
+    text-transform: capitalize;
+
+    color: ${(props) => props.color};
+    background-color: ${(props) => props.backgroundColor};
+`
 
 export default Answers;
