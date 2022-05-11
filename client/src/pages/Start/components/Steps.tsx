@@ -70,6 +70,7 @@ const StyledStep = styled(Step)`
 
   .MuiStepIcon-text{
     font-weight: bold;
+    font-family: 'Assistant', sans-serif;
   }
 
   @media only screen and (max-width: 550px) {
