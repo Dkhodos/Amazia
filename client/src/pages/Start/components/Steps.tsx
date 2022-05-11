@@ -62,10 +62,15 @@ const StyledStepper = styled(Stepper)`
   @media only screen and (max-width: 300px) {
     display: none;
   }
+
 `
 
 const StyledStep = styled(Step)`
-  pointer-events: "none";
+  pointer-events: none;
+
+  .MuiStepIcon-text{
+    font-weight: bold;
+  }
 
   @media only screen and (max-width: 550px) {
     padding-left: 0px;
