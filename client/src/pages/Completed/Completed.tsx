@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, { useEffect, useMemo} from 'react';
+import React, { useEffect, useMemo, useRef} from 'react';
 import Main from "../../components/Main";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { selectLogs, selectQuestionsIndex, selectTime, selectVictory } from "../../store/reducers/root/root.selectors";
@@ -15,6 +15,7 @@ import getSession from "../../utils/getSession";
 
 const Completed = () => {
     const dispatch = useAppDispatch();
+    const reported = useRef(false);
 
     const logs = useAppSelector(selectLogs);
     const victory = useAppSelector(selectVictory);
@@ -34,6 +35,10 @@ const Completed = () => {
         const userID = getLogin().id;
         clearSession();
 
+        if(reported.current){
+            return;
+        }
+
         if(victory && userID){
             Activities.add({
                 id: userID,
@@ -42,7 +47,8 @@ const Completed = () => {
                 time: time,
                 session: getSession()
             }).then(() => {
-                console.log(`%creported: id: ${userID} | score: ${correct}/${logs.length} | quizIndex: ${quizIndex} | time: ${time}s`, 'font-width:bold;')
+                console.log(`%creported: id: ${userID} | score: ${correct}/${logs.length} | quizIndex: ${quizIndex} | time: ${time}s`, 'font-width:bold;');
+                reported.current = true;
             })
         }
     },[])
