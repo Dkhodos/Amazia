@@ -7,7 +7,7 @@ export interface Activity{
     user: Key,
     quizIndex: number,
     logs: boolean[],
-    date: number //timestamp (ISR)
+    date: Date
     time: number // minutes
     userAgent: string
     session: number
@@ -31,7 +31,7 @@ export default class Activities extends DSEntity<Activity>{
 
         const newActivity:Activity = {
             ...activity,
-            date: Date.now(),
+            date: new Date(),
             userAgent,
             user: key
         }
