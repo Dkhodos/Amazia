@@ -10,17 +10,18 @@ interface Props{
     step: number
     total?: number
     logs: boolean[]
+    onStepClicked: (step: number) => void
 }
 
 function getSteps(total: number): number[]{
   return Array(total).fill(0).reduce((arr) => {arr.push(arr.length + 1); return arr}, [])
 }
 
-export const Steps:React.FC<Props> = ({step, total = 10, logs}) => {
+export const Steps:React.FC<Props> = ({step, total = 10, logs,onStepClicked}) => {
     return (
         <StyledStepper nonLinear activeStep={step - 1}>
           {getSteps(total).map((index: number) => (
-            <StyledStep key={index} completed={step > index} >
+            <StyledStep key={index} completed={step > index}>
               <StepButton color="inherit" icon={isIcon(step, index, logs) ? <StepIcon index={index} logs={logs} step={step}/> : undefined}/>
             </StyledStep>
           ))}
@@ -64,6 +65,8 @@ const StyledStepper = styled(Stepper)`
 `
 
 const StyledStep = styled(Step)`
+  pointer-events: "none";
+
   @media only screen and (max-width: 550px) {
     padding-left: 0px;
     padding-right: 0px;

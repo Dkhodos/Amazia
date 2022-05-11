@@ -7,12 +7,13 @@ import { Box } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../../store";
 import {fetchQuestions} from "../../store/reducers/root/root.action";
 import { selectLoaders, selectLogs, selectQuestions, selectQuestionsIndex, selectVictory } from "../../store/reducers/root/root.selectors";
-import usePreloadImages from "./hooks/usePreloadImages";
 import { setLogs, setTime, setVictory, updateLogs } from "../../store/reducers/root";
 import useSavedSession from "./hooks/useSavedSession";
 import { Navigate } from "react-router-dom";
 import Loader from "../../components/Loader";
 import useTimer from "../../hooks/useTimer";
+import styled from "@emotion/styled";
+import { Question } from "../../@types/questions";
 
 export default function Start() {
     const dispatch = useAppDispatch();
@@ -30,9 +31,6 @@ export default function Start() {
     const victory = useAppSelector(selectVictory);
     const {questions: isLoading} = useAppSelector(selectLoaders);
     const {start: startTimer, stop: stopTimer, time, set: setTimer} = useTimer();
-
-
-    usePreloadImages();
 
     /* start timer */
     useEffect(() => {
@@ -89,6 +87,10 @@ export default function Start() {
         }
     }
 
+    function onStepClicked(stepClicked: number){
+        setStep(stepClicked);
+    }
+
     if(isLoading || questions.length === 0){
         return <Loader/>;
     }
@@ -98,12 +100,71 @@ export default function Start() {
     }
 
     return (
-        <Box>
-            <Main title={"Describe the emotion in the picture"}>
-                <Steps step={step + 1} logs={logs}/>
-                <QuestionImage src={questions[step].image}/>
-                <Answers answer={questions[step].answer} options={questions[step].options} onAnswer={onAnswer}/>
-            </Main>
-        </Box>
+        <StartBox>
+            <StartMain title={"Describe the emotion in the picture"}>
+                <Steps step={step + 1} logs={logs} onStepClicked={onStepClicked}/>
+                <QuestionsWrapper step={step}>
+                    {
+                        questions.map((question, index) => (
+                            <QuestionItem {...question} onAnswer={onAnswer} 
+                                           inView={index === step} far={Math.abs(index - step) > 3}
+                                           inactive={step !== index}/>)
+                        )
+                    }
+                </QuestionsWrapper>
+            </StartMain>
+        </StartBox>
     )
 }
+
+
+const StartMain = styled(Main)`
+    overflow: hidden;
+`;
+
+const StartBox = styled(Box)`
+    overflow: hidden;
+`;
+
+
+interface QuestionsWrapperProps{
+    step: number
+};
+
+const QuestionsWrapper = styled.div<QuestionsWrapperProps>`
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transition: transform .7s ease-in-out, opacity .7s ease-in-out;
+    transform: translate(${(props) => -100 * props.step}%);
+`
+
+interface QuestionProps extends Question{
+    onAnswer: (isRight: boolean) => void
+    className?: string
+    inView: boolean
+    far: boolean
+    inactive: boolean
+}
+
+const QuestionItem = styled(({answer,image,onAnswer,options, className}:QuestionProps) => (
+    <div className={className}>
+        <QuestionImage src={image}/>
+        <Answers answer={answer} options={options} onAnswer={onAnswer} className={"amz-answers"}/>
+    </div>
+))<QuestionProps>`
+    width: 100%;
+    flex-shrink: 0;
+    transition: opacity .3s ease-in-out;
+    background: white;
+
+    opacity: ${(props) => props.inView ? 1: 0};
+
+    .amz-answers{
+        pointer-events: ${(props) => props.inactive ? "none" : ""};
+    }
+
+    *{
+        display:  ${(props) => props.far ? "none": ""};
+    }
+`;

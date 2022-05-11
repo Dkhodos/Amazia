@@ -6,6 +6,7 @@ interface Props {
     answer: string
     options: string[]
     onAnswer: (isRight: boolean) => void
+    className?: string
 }
 
 const getDefaultStatus = (options: string[]) => {
@@ -16,7 +17,7 @@ const getDefaultStatus = (options: string[]) => {
     }, {} as Record<string, Status>);
 }
 
-const Answers: React.FC<Props> = ({answer, options, onAnswer}) => {
+const Answers: React.FC<Props> = ({answer, options, onAnswer, className}) => {
     const [statuses, setStatuses] = useState<Record<string, Status>>({});
 
     function updateStatus(value: string, status: Status){
@@ -43,7 +44,7 @@ const Answers: React.FC<Props> = ({answer, options, onAnswer}) => {
     }
 
     return (
-        <Stack spacing={2} margin={"20px 30px"} padding={"5px 10px"}>
+        <Stack spacing={2} margin={"20px 30px"} padding={"5px 10px"} className={className}>
             {
                 options.map(item => <Answer key={item} name={item} 
                                          onSelect={() => onSelect(item)} isAnswer={item === answer}
@@ -109,8 +110,12 @@ const Item = styled(Paper)<ItemProps>`
     transition:  .2s background-color ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out !important;
     text-transform: capitalize;
 
+    &:hover{
+        background-color: #eee;
+    }
+
     color: ${(props) => props.color};
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundColor} !important;
 `
 
 export default Answers;
