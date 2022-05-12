@@ -2,6 +2,7 @@ import console from 'console';
 import express from 'express';
 import fs from "fs/promises";
 import path from "path";
+import ApiError from '../../utils/ApiError';
 import { getRandomQuestions } from './questions.utils';
 
 const questionsView = express.Router();
@@ -24,14 +25,10 @@ questionsView.get('/',  async (req, res) => {
     const questions = await getQuestions();
     const params = req.query;
 
-    console.log(params);
-
-    if(!("id" in params)){
-        res.json({
-            error: true,
-            msg: "Missing user ID!"
-        });
+    if(ApiError.raiseOnMissingParams<any>(["id"], params, res)){
+        return;
     }
+
 
     const randomIndex = await getRandomQuestions(questions.length, String((params as any).id));
 
@@ -51,14 +48,8 @@ questionsView.get('/:index',  async (req, res) => {
             index,
         });
     } else {
-        res.json({
-            error: "true",
-            msg: "Invalid index!"
-        })
+        ApiError.badRequest("Invalid index!", res).resolve();
     }
 });
-
-
-
 
 export default questionsView;

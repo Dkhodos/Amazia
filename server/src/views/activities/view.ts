@@ -1,4 +1,5 @@
 import express from 'express';
+import ApiError from '../../utils/ApiError';
 import Activities from '../../db/Activities';
 import { isValidActivity } from './activities.utils';
 
@@ -14,18 +15,16 @@ activityView.post("/", async (req, res) => {
     const userAgent = `${req.useragent?.browser} | mobile:${req.useragent?.isMobile}`
 
     if(!id){
-        res.json({
-            error: true,
-            msg: "Missing id!"
-        });
+        ApiError.badRequest("missing id!", res);
+
+        return;
     }
 
     const {valid, reason} = isValidActivity(activity);
     if(!valid){
-        res.json({
-            error: true,
-            msg: reason
-        });
+        ApiError.badRequest("Invalid activity received, " + reason, res);
+
+        return;
     }
 
     const newActivity = await (new Activities()).addActivity(id, activity, userAgent);
@@ -35,10 +34,7 @@ activityView.post("/", async (req, res) => {
          payload: activity
         })
     } else {
-        res.json({
-            error: true,
-            msg: "Invalid Activity!"
-        });
+        ApiError.badRequest("Invalid Activity!" + reason, res);
     }
 });
 

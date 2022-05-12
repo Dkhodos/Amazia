@@ -1,5 +1,6 @@
 import { Datastore, Key } from '@google-cloud/datastore';
 import path from "path";
+import Logger from '../logger/Logger';
 
 type Filters = Record<string,boolean | string | number | Key>
 
@@ -28,11 +29,13 @@ function newDatastore(){
         } else {
             return new Datastore({
                 // @ts-ignore
-                projectId: 'adept-bridge-349115',
+                projectId: process.env.PROJECT_ID,
                 keyFilename: path.resolve(__dirname, "../../ds_key.json")
             });
         }
     } catch (e){
+        Logger.ERROR("DS Failed to Load:\n" + e);
+
         throw new Error(e);
     }
 
@@ -132,8 +135,7 @@ export default abstract class DSEntity<T>{
 }
 
 async function getWithFilter<T>({filters={}, key, order, limit = 100, datastore}: {key:string, filters?: Filters, order?: string, limit?: number, datastore: Datastore}): Promise<Entity<T>[] | null>{
-    console.log(`new query: ${key}, filters=${JSON.stringify(filters)}`);
-    
+    Logger.INFO(`new query: ${key}, filters=${JSON.stringify(filters)}`)    
 
     const query = datastore.createQuery(key);
 

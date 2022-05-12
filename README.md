@@ -14,6 +14,14 @@ cd ../client
 npm i
 ```
 
+## setup env for server
+1. get `ds_key.json` from **admin** and add it to `project_root/server`.
+2. create an .env file
+```
+PORT=5001
+PROJECT_ID="{{ get from admin}}"
+```
+
 ## Run server
 ```shell
 cd server

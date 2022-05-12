@@ -1,7 +1,7 @@
-import console from 'console';
 import express from 'express';
+import ApiError from '../../utils/ApiError';
 import Users, { User } from '../../db/Users';
-import { isValidUpdateParams } from './users.utils';
+import { isValidUpdateParams, validKeysToUpdate } from './users.utils';
 
 const usersView = express.Router();
 usersView.use((req, res, next) => {
@@ -14,18 +14,17 @@ usersView.get('/:id',  async (req, res) => {
     const id = req.params.id;
 
     const user = await (new Users().getWithId(id));
-
-    res.json(user.data);
+    if(user){
+        res.json(user.data);
+    } else {
+        ApiError.badRequest( `User ${id} doesn't exist!`, res).resolve()
+    }
 });
 
 usersView.post('/',  async (req, res) => {
     const params = req.body;
-    console.log(params);
-    if(!("id" in params && "name" in params)){
-        res.json({
-            error: true,
-            msg: "Missing params!"
-        });
+
+    if(ApiError.raiseOnMissingParams<any>(["id", "name"], params, res)){
         return;
     }
 
@@ -37,10 +36,7 @@ usersView.post('/',  async (req, res) => {
             payload: newUser
         });
     } else {
-        res.json({
-            error: true,
-            msg: `User ${params.id} doesn't exist!`
-        })
+        ApiError.badRequest( `User ${params.id} doesn't exist!`, res).resolve()
     }
 });
 
@@ -56,10 +52,7 @@ usersView.delete("/:id", async (req, res) => {
             msg: `User ${id} update!`,
         })
     } else {
-        res.json({
-            error: true,
-            msg: `User ${id} doesn't exist!`
-        })
+        ApiError.badRequest(`User ${id} doesn't exist!`, res).resolve();
     }
 });
 
@@ -69,15 +62,11 @@ usersView.put("/:id", async (req, res) => {
     const params = req.body;
 
     if(!isValidUpdateParams(params)){
-        res.json({
-            error: true,
-            msg: "invalid update key"
-        })
+        ApiError.badRequest("missing valid Keys: " + validKeysToUpdate, res);
+        return;
     }
 
     const updatedUser = await (new Users().updateById(id, params as Partial<User>));
-
-    console.log(updatedUser);
 
     if(updatedUser){
         res.json({
@@ -86,10 +75,7 @@ usersView.put("/:id", async (req, res) => {
             payload: updatedUser
         })
     } else {
-        res.json({
-            error: true,
-            msg: "User doesn't exist!"
-        })
+        ApiError.badRequest(`User ${id} doesn't exist!`, res).resolve();
     }
 });
 

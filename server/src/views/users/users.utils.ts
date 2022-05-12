@@ -1,4 +1,4 @@
-const validKeysToUpdate = ["id", "name", "currentQuiz", "quizCompleted"];
+export const validKeysToUpdate = ["id", "name"];
 
 
 export function isValidUpdateParams(params: Record<string,string>){

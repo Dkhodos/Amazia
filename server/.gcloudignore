@@ -6,3 +6,6 @@ node_modules/
 
 # Other
 ds_key.json
+scripts/
+.env
+.gitignore
