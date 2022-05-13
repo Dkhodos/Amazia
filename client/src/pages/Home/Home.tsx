@@ -23,20 +23,15 @@ export default function Home() {
 
     return (
         <Main title={"Welcome!"}>
-            <strong>Read the following instruction...</strong>
+            <strong>Emotional recognition quiz</strong>
             <Box>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam.
+                   The following quiz includes 10 question in which you need to recognize which
+                    emotion is primarily shown by the actor.
                 </p>
-                <ul>
-                    <ol> 1. Lorem ipsum dolor sit amet 1</ol>
-                    <ol> 2. Lorem ipsum dolor sit amet 2</ol>
-                    <ol> 3. Lorem ipsum dolor sit amet 3</ol>
-                </ul>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam.
+                    Please do your best to recognize as many emotions correctly as you can,
+                    good luck!!!
                 </p>
                 <Button type={"submit"} variant="contained" onClick={onStart}>Start!</Button>
             </Box>
