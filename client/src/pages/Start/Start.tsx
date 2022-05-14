@@ -101,7 +101,7 @@ export default function Start() {
 
     return (
         <StartBox>
-            <StartMain title={"Describe the emotion in the picture"}>
+            <StartMain title={"Which emotion represents the picture?"}>
                 <Steps step={step + 1} logs={logs} onStepClicked={onStepClicked}/>
                 <QuestionsWrapper step={step}>
                     {

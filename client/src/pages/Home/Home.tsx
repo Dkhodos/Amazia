@@ -23,8 +23,7 @@ export default function Home() {
 
     return (
         <Main title={"Welcome!"}>
-            <strong>Emotional recognition quiz</strong>
-            <Box>
+            <div class='Description'>
                 <p>
                    The following quiz includes 10 question in which you need to recognize which
                     emotion is primarily shown by the actor.
@@ -34,7 +33,7 @@ export default function Home() {
                     good luck!!!
                 </p>
                 <Button type={"submit"} variant="contained" onClick={onStart}>Start!</Button>
-            </Box>
+            </div>
         </Main>
     )
 }
