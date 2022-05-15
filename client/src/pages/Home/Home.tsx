@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import styled from '@emotion/styled'
 import Main from "../../components/Main";
 import {Box, Button} from "@mui/material";
 import {Navigate} from "react-router-dom";
@@ -21,9 +22,13 @@ export default function Home() {
         return <Navigate to={'/start'}/>
     }
 
+    const Description = styled.div`
+     padding: 12px;
+     `;
+
     return (
         <Main title={"Welcome!"}>
-            <div class='Description'>
+            <Description>
                 <p>
                    The following quiz includes 10 question in which you need to recognize which
                     emotion is primarily shown by the actor.
@@ -33,7 +38,7 @@ export default function Home() {
                     good luck!!!
                 </p>
                 <Button type={"submit"} variant="contained" onClick={onStart}>Start!</Button>
-            </div>
+            </Description>
         </Main>
     )
 }
