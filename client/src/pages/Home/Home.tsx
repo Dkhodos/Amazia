@@ -5,6 +5,10 @@ import {Box, Button} from "@mui/material";
 import {Navigate} from "react-router-dom";
 import useSavedSession from "../Start/hooks/useSavedSession";
 
+const Description = styled.div`
+padding: 12px;
+`;
+
 export default function Home() {
     const [start, setStart] = useState(false);
     const {clearSession} = useSavedSession();
@@ -22,9 +26,6 @@ export default function Home() {
         return <Navigate to={'/start'}/>
     }
 
-    const Description = styled.div`
-     padding: 12px;
-     `;
 
     return (
         <Main title={"Welcome!"}>
