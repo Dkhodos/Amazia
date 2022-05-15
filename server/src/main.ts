@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from "express";
 import apiView from './views';
 import userAgent from "express-useragent";
+import { createDatastore } from './db/DatastoreEntity';
 
 // init express
 const app = express();
@@ -28,5 +29,8 @@ app.get("/_ah/start", (req, res) => {
 app.use("/api", apiView);
 
 app.listen( port, () => {
-    console.log( `server started at http://localhost:${ port }` );
+    if(process.env.NODE_ENV !== 'production'){
+        console.log( `server started at http://localhost:${ port }` );
+    }
+    createDatastore();
 } );
