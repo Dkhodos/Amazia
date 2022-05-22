@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.MuiTextField-root{
+  width: 100%;
+}
+
+body *{
+  font-family: 'Assistant', sans-serif;
+}

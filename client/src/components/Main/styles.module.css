@@ -1,0 +1,13 @@
+.main {
+    width: min(600px, 90vw);
+}
+
+.header {
+    text-align: left;
+    padding: 15px 20px;
+    background: #eeeeee;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}

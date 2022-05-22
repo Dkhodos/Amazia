@@ -1,0 +1,22 @@
+runtime: nodejs14
+instance_class: F1
+
+handlers:
+  - url : /_ah/health
+    script: auto
+
+  - url : /_ah/start
+    script: auto
+
+  - url: /api/.*
+    script: auto
+
+  # Serve all static files with url ending with a file extension
+  - url: /(.*\..+)$
+    static_files: static/\1
+    upload: static/(.*\..+)$
+
+  # Catch all handler to index.html
+  - url: /.*
+    static_files: static/index.html
+    upload: static/index.html

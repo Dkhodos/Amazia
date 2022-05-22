@@ -1,0 +1,13 @@
+# Exclude compiled .js files
+src/*.js
+src/dumps.ts
+dump.csv
+
+# Exclude dependencies
+node_modules/
+
+# Other
+ds_key.json
+scripts/
+.env
+.gitignore
