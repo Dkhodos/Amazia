@@ -1,6 +1,9 @@
 # Amazia
 
-project description
+Client: React + Typescript + MUI + Redux Toolit
+Server: Node + Typescript + Express + gcloud services (GEA, Datastore & Logging)
+
+URL: https://adept-bridge-349115.el.r.appspot.com
 
 ## Dependencies
 1. Install gcloud CLI
