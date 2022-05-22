@@ -5,6 +5,11 @@ Server: Node + Typescript + Express + gcloud services (GEA, Datastore & Logging)
 
 URL: https://adept-bridge-349115.el.r.appspot.com
 
+## Description
+The following quiz includes 10 question in which you need to recognize which emotion is primarily shown by the actor.
+
+Please do your best to recognize as many emotions correctly as you can, good luck!!!
+
 ## Dependencies
 1. Install gcloud CLI
 https://cloud.google.com/sdk/docs/install-sdk
